@@ -44,7 +44,7 @@ main.BorderColor3 = Color3.fromRGB(27, 42, 53)
 main.BorderSizePixel = 0
 main.Position = UDim2.new(0.0543109924, 0, 0.103222892, 0)
 main.Size = UDim2.new(0, 689, 0, 320)
-main.Visible = false
+main.Visible = true
 
 bar.Name = "bar"
 bar.Parent = main
@@ -495,6 +495,16 @@ local function TQUFDDG_fake_script() -- Attach.LocalScript
 	
 end
 coroutine.wrap(TQUFDDG_fake_script)()
+local function OIRT_fake_script()
+local script = Instance.new('LocalScript', main)
+	local uip = game:GetService("UserInputService")
+	uip.InputBegan:Connect(function(input)
+if input.Keycode == Enum.Keycode.Insert or input.Keycode == Enum.Keycode.Delete then
+
+		main.Visible = not main.Visible
+	end
+end
+coroutine.wrap(OIRT_fake_script)()
 local function UINR_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
